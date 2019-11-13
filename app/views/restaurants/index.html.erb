@@ -1,0 +1,7 @@
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <% p_number = restaurant.phone_number.nil? ? 'no phone number' : restaurant.phone_number %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %><%= "|" + restaurant.address + "|" + p_number + "|" +
+     restaurant.category %></li>
+  <% end %>
+</ul>
